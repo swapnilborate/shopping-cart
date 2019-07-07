@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-sm-4">
+      <div class="card bg-light">
+        <div class="card-body">
+          <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="name">Recipe Name:</label>
+              <input type="text" class="form-control" id="name" formControlName="name" required>
+            </div>
+            <div class="form-group">
+              <label for="price">Price:</label>
+              <input type="number" class="form-control" id="price" formControlName="price" required>
+            </div>
+            <div class="form-group">
+                <label for="desc">Recipe Description:</label>
+                <textarea class="form-control" id="desc" rows="5" formControlName="description" required></textarea>
+              </div>
+            <div class="form-group">
+              <label for="name">Ingredients Name:</label>
+              <input type="text" class="form-control" id="name" formControlName="iname" required>
+            </div>
+            <div class="form-group">
+              <label for="price">Ingredients Quantity:</label>
+              <input type="number" class="form-control" id="quantity" formControlName="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Ingredients Type:</label>
+                <input type="text" class="form-control" id="price" formControlName="type" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Recipe Image:</label>
+                <input type="file" (change)="onFileChange($event)" required/>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" >Submit</button>&nbsp;
+            <button type="reset" class="btn btn-danger" (click)="resetForm">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
