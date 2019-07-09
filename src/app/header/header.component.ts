@@ -12,18 +12,6 @@ export class HeaderComponent implements OnInit {
 
   constructor( private router: Router ) { }
 
-  onSelect(feature:string){
-    this.featureSelected.emit(feature)
-    }
-
-    recipesClick(){
-      this.router.navigateByUrl('/book');
-    }
-
-    listClick(){
-      this.router.navigateByUrl('/list');
-    }
-
   ngOnInit() {
   }
 

@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ReceipeBookComponent } from './receipe-book/receipe-book.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+//import { ShoppingListComponent } from './receipe-book/shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [

@@ -18,29 +18,26 @@
     <div class="item col-xs-4 col-lg-4" *ngFor="let details of listDetails">
       <div class="thumbnail card">
         <div class="img-event">
-          <img class="group list-group-image img-fluid img-custom" src="{{details.imageURL}}" alt="" />
+          <img class="group list-group-image img-fluid img-custom" [src]="details.file" alt="" />
         </div>
         <div class="caption card-body">
           <h4 class="group card-title inner list-group-item-heading">
             {{details.name}}</h4>
-          <p class="group inner list-group-item-text">
-            Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <p class="group inner list-group-item-text">{{details.description}}</p>
           <ul id="myList" class="list-group">
-            <a class="list-group-item" style="cursor: pointer"  *ngFor="let ingredient of details.ingredients">
-             <strong>Name -</strong> {{ ingredient.name }} <strong>Qty - </strong>({{ ingredient.quantity }}) <strong>Type - </strong>{{ ingredient.type }}
+            <a class="list-group-item" style="cursor: pointer" >
+             <strong>Name -</strong> {{ details.name }} <strong>Qty - </strong>({{ details.quantity }}) <strong>Type - </strong>{{ details.type }}
             </a>
           </ul>
           <div class="row">
             <div class="col-xs-12 col-md-6">
               <p class="lead">
-                $21.000</p>
+              Rs.  {{details.price}}</p>
             </div>
-            <div class="col-xs-12 col-md-6">
-              <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-            </div>
+           
           </div>
         </div>
       </div>
     </div>
   </div>
+ 
